@@ -12,5 +12,6 @@
 </div>
 
 <!-- <%= button_to "Delete product", @product, method: :delete, class: 'btn btn-danger'%> -->
-<%= button_to "Destroy", @product, method: :delete, form: { data: {turbo_confirm: 'Are you sure?'} } %>
+<%= button_to "Destroy", @product, method: :delete, form: { data: {
+    turbo_confirm: t('common.confirm')} } %>
 

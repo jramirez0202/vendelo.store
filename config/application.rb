@@ -18,6 +18,16 @@ module Railshotwire
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    
     config.active_record.async_query_executor = :global_thread_pool
+    
+    # Where the I18n library should search for translation files
+    I18n.config.enforce_available_locales = (Rails.env.test? ? false : true)
+    
+    #avalaible lenguages
+    config.i18n.available_locales = [:en, :es]
+
+    #lenguage by default
+    config.i18n.default_locale = :es
   end
 end

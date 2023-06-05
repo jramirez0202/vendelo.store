@@ -1,5 +1,5 @@
 <%= turbo_frame_tag 'home' do %>
-    <h1>Productos:</h1>
+    <h1><%= t('.title') %></h1>
 
       <!-- #form para max y min price -->
     <%= form_with url: products_path, method: :get do |form| %>
